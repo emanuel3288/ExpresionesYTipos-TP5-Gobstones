@@ -1,0 +1,28 @@
+program {
+    
+    Mover_SegúnColor_(Norte, Rojo)
+    
+}
+procedure Mover_SegúnColor_(dirección,color) {
+    /*
+    PROPOSITO:      -Mueve el cabezal tantas celdas como bolitas del color **color** en la dirección **dirección**. 
+    PRECONDICIÓN:   -Deben existir al menos tantas celdas como bolitas del color **color** en la dirección **dirección**.
+                    -Debe/n existir al menos una bolita del color **color** para que el cabezal se mueva en la dirección **dirección**.
+    PARAMETROS:     
+        **dirección**:  -Dirección. Indíca la dirección en la que el cabezal se mueve. 
+        **color**:      -Color    . Indíca el color de la bolita a sensar.
+    */
+    Mover_VecesAl_(nroBolitas(color), dirección)
+}
+
+procedure Mover_VecesAl_(cantidadAMover, direcciónAMover) {
+  /*
+  PROPOSITO:    -Posiciona el cabezal **cantidadAMover** celdas en la dirección **direcciónAMover**.
+  PRECONDICION: -Deben existir al menos **cantidadAMover** celdas al **direcciónAMover** de la celda actual.
+  PARAMETROS:   -**cantidadAMover**:   -Numero.   Indíca la cantidad de veces que se va a mover el cabezal.
+                -**direcciónAMover**:  -Dirección.Indíca la dirección en la que el cabezal se deberá mover.
+  */
+  repeat(cantidadAMover) {
+    Mover(direcciónAMover)
+  }
+}

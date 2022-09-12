@@ -1,0 +1,66 @@
+
+program {
+    
+   DibujarLaBandaGloriosaDeAncho_(6)
+}
+
+
+procedure DibujarLaBandaGloriosaDeAncho_(ancho) {
+    /*
+    PROPOSITO:      -Dibuja hacia noreste la banda gloriosa de **ancho** celdas de ancho y 4 celdas de alto.
+    PRECONDICION:   -Deben existir al menos **ancho** celdas de ancho por 4 celdas de alto.
+                    -Deben estar vacias al menos **ancho** celdas de ancho y 4 celdas de alto. 
+    PARAMETROS:
+        **ancho**: Numero. -Indíca la cantidad de celdas de ancho de la banda gloriosa.
+    */
+    repeat(4) {
+        DibujarLineaDiagonalDeAncho_(ancho)
+        IrAProximaLineaDiagonal()
+    }
+    IrAlInicioDeLaBandaGloriosa()
+}
+
+
+//
+procedure DibujarLineaDiagonalDeAncho_(ancho) {
+    /*
+    PROPOSITO:      -Dibuja una linea diagonal desde la celda actual hacia el noreste de **ancho** celdas de ancho y 4 de largo. 
+    PRECONDICION:   -Deben existir al menos **ancho-1** hacia el este y 3 celdas hacia el norte.
+                    -Deben estar vacias al menos 
+    PARÁMETROS:
+        **ancho**: Numero.  -
+    */
+    repeat(ancho-1){
+        Poner(Rojo)
+        MoverEnDiagonalAl_Y_(Norte,Este)
+    }
+    Poner(Rojo)
+    VolverAlInicioDeLaDiagonalDeAncho_(ancho)
+}
+procedure VolverAlInicioDeLaDiagonalDeAncho_(ancho) {
+    
+    repeat(ancho-1) {
+        MoverEnDiagonalAl_Y_(Sur,Oeste)
+    }
+}
+
+procedure MoverEnDiagonalAl_Y_(primeraDireccionAMover,segundaDireccionAMover) {
+    Mover(primeraDireccionAMover)
+    Mover(segundaDireccionAMover)
+}
+
+//
+procedure IrAProximaLineaDiagonal() {
+    /*
+    PROPOSITO:
+    PRECONDICION:
+    */
+    Mover(Norte)
+}
+
+procedure IrAlInicioDeLaBandaGloriosa() {
+    repeat(4) {
+        Mover(Sur)
+    }
+}
+
