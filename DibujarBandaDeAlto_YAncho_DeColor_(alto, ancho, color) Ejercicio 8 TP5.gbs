@@ -1,9 +1,25 @@
 
+
 program {
-    
-   DibujarLaBandaGloriosaDeAncho_(6)
+    DibujarBandaDeAlto_YAncho_DeColor_(6, 3, Verde)
 }
 
+
+
+procedure DibujarBandaDeAlto_YAncho_DeColor_(alto, ancho, color) {
+        /*
+    PROPOSITO:      -Dibuja hacia noreste una banda de **color** con un **ancho** y **alto** de celdas.
+    PRECONDICION:   -Deben existir al menos **ancho** y **alto** de celdas hacia noreste con el cabezal iniciando en el vèrtice inferior izquierdo de la banda.
+                    -Las celdas deben estar vacias desde la celda actual hasta el **ancho** y **alto** de la banda. 
+    PARAMETROS:
+        **ancho**: Numero. -Indíca la cantidad de celdas de ancho de la banda gloriosa.
+    */
+    repeat(alto) {
+        DibujarLineaDiagonalDeLargo_DeColor_(ancho, color)
+        IrAProximaLineaDiagonal()
+    }
+    IrAlInicioDeLaBandaGloriosaDeAlto_(alto)
+}
 
 // Ejercicio ya resuelto.
 procedure DibujarLaBandaGloriosaDeAncho_(ancho,colorDeLaBanda) {
@@ -79,4 +95,3 @@ procedure IrAlInicioDeLaBandaGloriosaDeAlto_(altoDeLaBanda) {
         Mover(Sur)
     }
 }
-
