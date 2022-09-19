@@ -48,7 +48,7 @@ procedure Sacar_ÁrbolesAl_(cantidadDeÁrboles, direcciónASacar) {
                     -Debe exisitr al menos un arbol en la dirección **direcciónASacar**.
     PARAMETROS:
         **cantidadDeÁrboles**: -Número.    -Indíca la cantidad de semillas a poner en la parcela lindante.
-        *direcciónASacar***:    -Dirección. -Indíca la dirección de las semillas a poner.
+        **direcciónASacar**:    -Dirección. -Indíca la dirección de las semillas a poner.
     */  
     Mover(direcciónASacar)
     Sacar_Árboles(cantidadDeÁrboles)
