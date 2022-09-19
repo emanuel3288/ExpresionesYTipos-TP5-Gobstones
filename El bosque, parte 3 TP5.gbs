@@ -64,7 +64,7 @@ procedure Poner_SemillasAl_(cantidadDeSemillas, direcciónAPoner){
                 
     PARAMETROS:
         **cantidadDeSemillas**: -Número.    -Indíca la cantidad de semillas a poner en la parcela lindante.
-        *direcciónAPoner***:    -Dirección. -Indíca la dirección de las semillas a poner.
+        **direcciónAPoner**:    -Dirección. -Indíca la dirección de las semillas a poner.
     */  
     Mover(direcciónAPoner)
     Poner_Semillas(cantidadDeSemillas)
